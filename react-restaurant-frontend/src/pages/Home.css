@@ -1,0 +1,54 @@
+.home-container {
+    padding: 0;
+    margin: 0;
+}
+
+.home-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: black;
+    padding-right: 30px;
+    padding-left: 20px;
+}
+
+.home-nav button {
+    margin: 10px;
+}
+
+/* Desktop Menu */
+.menu-desktop {
+    display: flex;
+}
+
+/* Hide the mobile icon on desktop */
+.menu-mobile-icon {
+    display: none;
+}
+
+/* Mobile menu (initially hidden) */
+.menu-mobile {
+    display: none;
+    flex-direction: column;
+    align-items: flex-end;
+    background-color: black;
+}
+
+.menu-mobile button {
+    margin: 0 30px 10px 0;
+}
+
+/* Media query for mobile view */
+@media (max-width: 768px) {
+    .menu-desktop {
+        display: none; /* Hide desktop menu */
+    }
+
+    .menu-mobile-icon {
+        display: block; /* Show the hamburger icon on mobile */
+    }
+
+    .menu-mobile {
+        display: flex; /* Show the mobile menu when toggled */
+    }
+}
