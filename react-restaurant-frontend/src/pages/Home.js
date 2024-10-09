@@ -4,6 +4,8 @@ import { Button, IconButton } from '@chakra-ui/react';
 import { HamburgerIcon } from '@chakra-ui/icons';
 import Logo from '../components/Logo';
 import './Home.css';
+import MainMenu from '../components/MainMenu';
+import Cart from '../components/Cart';
 
 function Home() {
     const [menuOpen, setMenuOpen] = useState(false);
@@ -48,6 +50,12 @@ function Home() {
                     </Link>
                 </div>
             )}
+
+            <div className="home-inner-container">
+                <MainMenu />
+                <Cart />
+            </div>
+
         </div>    
     );
 }
