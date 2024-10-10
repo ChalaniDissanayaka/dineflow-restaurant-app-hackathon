@@ -1,5 +1,9 @@
+import axios from 'axios';
+import toast from "react-hot-toast";
 import './Cart.css';
 import CartItem from './CartItem';
+import SubmitButton from './common/SubmitButton';
+import { api } from '../config';
 
 function Cart({cartItems, setCartItems}) {
 
@@ -46,11 +50,24 @@ function Cart({cartItems, setCartItems}) {
             if (itemId === item.id) {
                 return false;
             }
-            
+
             return true;
         })
 
         setCartItems(newCartItems);
+    };
+
+
+    const placeOrder = async () => {
+        try {
+            await axios.post(`${api}/item/place-order`, {items: cartItems});
+            toast.success("Order Placed Successfully");
+            setCartItems([]);
+
+        } catch (err) {
+            console.log(err);
+            toast.error("Something went wrong");
+        }    
     };
 
 
@@ -68,7 +85,18 @@ function Cart({cartItems, setCartItems}) {
                     />
                 ))}
             </div>
-            <div className="total"> Total: ${total} </div>
+
+            {cartItems.length > 0 && (
+                <>
+                    <div className="total"> Total: ${total} </div>
+                    <SubmitButton 
+                        text="Place Order" 
+                        className="place-order-button" 
+                        onClick={placeOrder} 
+                    />
+                </>
+            )};
+            
         </div>
     );
 }
