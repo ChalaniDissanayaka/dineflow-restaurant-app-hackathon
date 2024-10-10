@@ -2,6 +2,7 @@ import './App.css';
 import { ChakraProvider } from '@chakra-ui/react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Home from './pages/Home';
+import { Toaster } from 'react-hot-toast';
 
 function App() {
   return (
@@ -11,6 +12,7 @@ function App() {
         <Route path='/' element={<Home />} />
       </Routes>
       </BrowserRouter>
+      <Toaster position='bottom-right' />
     </ChakraProvider>
   );
 }

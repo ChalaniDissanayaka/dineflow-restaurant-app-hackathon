@@ -14,6 +14,8 @@ function Home() {
         setMenuOpen(!menuOpen);
     };
 
+    const [cartItems, setCartItems] = useState([]);
+
     return (
         <div className="home-container">
             <div className="home-nav">
@@ -52,8 +54,8 @@ function Home() {
             )}
 
             <div className="home-inner-container">
-                <MainMenu />
-                <Cart />
+                <MainMenu cartItems={cartItems} setCartItems={setCartItems} />
+                <Cart cartItems={cartItems} setCartItems={setCartItems} />
             </div>
 
         </div>    

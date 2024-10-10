@@ -23,13 +23,13 @@
 .menu-item-title {
   font-size: 18px;
   letter-spacing: 1px;
-  color: #334155;
+  color: #2d394b;
   padding-top: 5px;
   padding-bottom: 3px;
 }
 
 .menu-item-price {
   font-size: 16px;
-  color: #64748b;
+  color: #4c4d4e;
   font-weight: bold;
 }
