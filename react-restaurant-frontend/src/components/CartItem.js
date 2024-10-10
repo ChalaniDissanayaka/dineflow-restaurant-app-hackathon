@@ -2,7 +2,7 @@ import { IconButton } from "@chakra-ui/react";
 import { AddIcon, CloseIcon, DeleteIcon } from "@chakra-ui/icons";
 import { api } from "../config";
 
-function CartItem({ item }) {
+function CartItem({ item, handleAdd, handleReduce, handleRemove }) {
     return (
         <div className="cart-item-container">
             <img src={`${api}${item.image}`} alt="" className="box-shadow"/>
@@ -15,21 +15,21 @@ function CartItem({ item }) {
                     <IconButton
                         size="sm"
                         colorScheme="teal"
-                        icon={<AddIcon w={3} h={3} />}
-                        // onClick={handleAdd}
+                        icon={<AddIcon w={4} h={4} />}
+                        onClick={handleAdd}
                     />
                     <IconButton
                         size="sm"
                         colorScheme="yellow"
-                        icon={<CloseIcon w={3} h={3} />}
-                        // onClick={handleReduce}
+                        icon={<CloseIcon w={4} h={4} />}
+                        onClick={handleReduce}
                     />
                 </div>
             </div>
             <IconButton
                 colorScheme="red"
                 icon={<DeleteIcon />}
-                // onClick={handleRemove}
+                onClick={handleRemove}
             />
         </div>
     );
