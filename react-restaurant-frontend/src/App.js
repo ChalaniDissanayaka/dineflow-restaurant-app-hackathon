@@ -6,6 +6,8 @@ import { Toaster } from 'react-hot-toast';
 import Register from './pages/Register';
 import Login from './pages/Login';
 import GlobalProvider from './GlobalContext';
+import Dashboard from './pages/Dashboard';
+import AdminLayout from './components/layouts/AdminLayout';
 
 function App() {
   return (
@@ -16,6 +18,14 @@ function App() {
             <Route path='/' element={<Home />} />
             <Route path='/register' element={<Register />} />
             <Route path='/login' element={<Login />} />
+            <Route 
+              path='/admin' 
+              element = {
+                <AdminLayout>
+                  <Dashboard />
+                </AdminLayout>
+              } 
+            />
           </Routes>
         </GlobalProvider>
       </BrowserRouter>

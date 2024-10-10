@@ -30,7 +30,7 @@ function Login() {
       toast.success("Login successfull");
       setEmail("");
       setPassword("");
-      
+      navigate("/admin");
     } catch (err) {
       console.log(err);
       toast.error("Invalid Credentials");

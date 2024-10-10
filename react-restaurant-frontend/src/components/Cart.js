@@ -25,7 +25,7 @@ function Cart({cartItems, setCartItems}) {
         });
 
 
-        setCartItems(newCartItems);
+        setCartItems(newCartItems)
     };
 
     const handleReduce = (itemId) => {
@@ -95,7 +95,7 @@ function Cart({cartItems, setCartItems}) {
                         onClick={placeOrder} 
                     />
                 </>
-            )};
+            )}
             
         </div>
     );
