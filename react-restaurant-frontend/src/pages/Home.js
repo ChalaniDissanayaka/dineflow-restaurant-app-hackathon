@@ -6,9 +6,11 @@ import Logo from '../components/Logo';
 import './Home.css';
 import MainMenu from '../components/MainMenu';
 import Cart from '../components/Cart';
+import { useGlobal } from '../GlobalContext';
 
 function Home() {
     const [menuOpen, setMenuOpen] = useState(false);
+    const {user} = useGlobal();
 
     const toggleMenu = () => {
         setMenuOpen(!menuOpen);
@@ -21,12 +23,20 @@ function Home() {
             <div className="home-nav">
                 <Logo />
                 <div className="menu-desktop">
-                    <Link to="/login">
-                        <Button colorScheme='teal' variant='solid' size='md'>Login</Button>
-                    </Link>
-                    <Link to="/register">
-                        <Button colorScheme='yellow' variant='solid'>Register</Button>
-                    </Link>
+                    { user ? (
+                        <Link to="/admin">
+                            <Button colorScheme="teal">Go to Dashboard</Button>
+                        </Link>
+                    ): (
+                            <>
+                                <Link to="/login">
+                                    <Button colorScheme='teal' variant='solid' size='md'>Login</Button>
+                                </Link>
+                                <Link to="/register">
+                                    <Button colorScheme='yellow' variant='solid'>Register</Button>
+                                </Link>
+                            </>
+                    )}
                 </div>
 
                 {/* Mobile Menu Icon */}
@@ -44,12 +54,20 @@ function Home() {
             {/* Mobile Dropdown Menu */}
             {menuOpen && (
                 <div className="menu-mobile">
-                    <Link to="/login">
-                        <Button colorScheme='teal' variant='solid' size='md'>Login</Button>
-                    </Link>
-                    <Link to="/register">
-                        <Button colorScheme='yellow' variant='solid'>Register</Button>
-                    </Link>
+                    { user ? (
+                        <Link to="/admin">
+                            <Button colorScheme="teal">Go to Dashboard</Button>
+                        </Link>
+                    ): (
+                            <>
+                                <Link to="/login">
+                                    <Button colorScheme='teal' variant='solid' size='md'>Login</Button>
+                                </Link>
+                                <Link to="/register">
+                                    <Button colorScheme='yellow' variant='solid'>Register</Button>
+                                </Link>
+                            </>
+                    )}
                 </div>
             )}
 
