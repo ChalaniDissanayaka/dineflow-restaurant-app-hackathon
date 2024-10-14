@@ -10,6 +10,7 @@ import Dashboard from './pages/Dashboard';
 import AdminLayout from './components/layouts/AdminLayout';
 import Items from './pages/Items';
 import ItemForm from './pages/ItemForm';
+import Orders from './pages/Orders';
 
 function App() {
   return (
@@ -49,6 +50,14 @@ function App() {
               element = {
                 <AdminLayout>
                   <ItemForm />
+                </AdminLayout>
+              } 
+            />
+            <Route 
+              path='/admin/orders' 
+              element = {
+                <AdminLayout>
+                  <Orders />
                 </AdminLayout>
               } 
             />
