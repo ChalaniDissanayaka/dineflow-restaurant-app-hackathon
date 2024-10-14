@@ -1,0 +1,104 @@
+.submit-button {
+    width: 100%;
+    margin-top: 20px;
+}
+
+.item-form-container img {
+    width: 200px;
+    object-fit: cover;
+}
+
+
+
+/* Base styles for desktop and larger screens */
+.item-form-container {
+  width: 60%;
+  margin: 0 auto;
+}
+
+.item-form-container form {
+    border: 2px solid gray;
+    padding: 15px;
+    border-radius: 5px;
+}
+
+.item-form-container h2 {
+  font-size: 32px;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.item-form-container form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.item-form-container img {
+  margin-top: 10px;
+  object-fit: cover;
+}
+
+.submit-button {
+  margin-top: 20px;
+  padding: 10px 15px;
+  width: 100%;
+  background-color: #3182ce;
+  color: white;
+  font-size: 18px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  text-align: center;
+}
+
+.submit-button:hover {
+  background-color: #2b6cb0;
+}
+
+/* Tablet styles (768px and below) */
+@media (max-width: 768px) {
+  .item-form-container {
+    width: 60%; /* Make form wider on tablets */
+    padding: 15px;
+  }
+
+  .item-form-container h2 {
+    font-size: 28px;
+  }
+
+  .submit-button {
+    font-size: 16px;
+    padding: 8px 12px;
+  }
+}
+
+/* Mobile styles (480px and below) */
+@media (max-width: 480px) {
+  .item-form-container {
+    width: 90%; /* Full width for mobile view */
+    padding: 5px;
+  }
+
+  .item-form-container h2 {
+    font-size: 24px;
+  }
+
+  .item-form-container form {
+    gap: 10px;
+  }
+
+  .item-form-container img {
+    width: 100px;
+    height: 100px;
+    display: block;
+    margin: 10px auto; /* Center the image in mobile view */
+  }
+
+  .submit-button {
+    font-size: 14px;
+    padding: 8px 10px;
+  }
+}
+

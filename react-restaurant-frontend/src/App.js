@@ -8,6 +8,8 @@ import Login from './pages/Login';
 import GlobalProvider from './GlobalContext';
 import Dashboard from './pages/Dashboard';
 import AdminLayout from './components/layouts/AdminLayout';
+import Items from './pages/Items';
+import ItemForm from './pages/ItemForm';
 
 function App() {
   return (
@@ -23,6 +25,30 @@ function App() {
               element = {
                 <AdminLayout>
                   <Dashboard />
+                </AdminLayout>
+              } 
+            />
+            <Route 
+              path='/admin/items' 
+              element = {
+                <AdminLayout>
+                  <Items />
+                </AdminLayout>
+              } 
+            />
+            <Route 
+              path='/admin/item-form' 
+              element = {
+                <AdminLayout>
+                  <ItemForm />
+                </AdminLayout>
+              } 
+            />
+            <Route 
+              path='/admin/item-form/:id' 
+              element = {
+                <AdminLayout>
+                  <ItemForm />
                 </AdminLayout>
               } 
             />

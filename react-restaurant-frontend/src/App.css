@@ -3,7 +3,7 @@
 }
 
 body {
-    background-color: #eaf6f9 !important;
+    background-color: #f2fbfd !important;
 }
 
 .box-shadow {
@@ -15,4 +15,12 @@ body {
     align-items: center;
     justify-content: center;
     min-height: 100vh;
+}
+
+.subtitle {
+    font-size: 28px;
+    text-align: center;
+    font-weight: bolder;
+    padding-top: 20px;
+    padding-bottom: 10px;
 }

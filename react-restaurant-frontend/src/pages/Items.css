@@ -1,0 +1,17 @@
+.items-container table {
+    margin-top: 20px;  
+}
+   
+.items-container img {
+    height: 100px;
+    width: 100px;
+    object-fit: cover;
+}
+
+.items-container Th {
+    font-size: 18px;
+    font-weight: bolder;
+    color: rgb(64, 63, 63);
+}
+
+
