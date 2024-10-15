@@ -7,6 +7,7 @@ import './Home.css';
 import MainMenu from '../components/MainMenu';
 import Cart from '../components/Cart';
 import { useGlobal } from '../GlobalContext';
+import Footer from '../components/Footer';
 
 function Home() {
     const [menuOpen, setMenuOpen] = useState(false);
@@ -75,8 +76,10 @@ function Home() {
                 <MainMenu cartItems={cartItems} setCartItems={setCartItems} />
                 <Cart cartItems={cartItems} setCartItems={setCartItems} />
             </div>
+            <Footer />
 
-        </div>    
+        </div>  
+
     );
 }
 
