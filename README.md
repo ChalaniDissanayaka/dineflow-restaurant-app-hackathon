@@ -189,7 +189,7 @@ The significance of the restaurant app is to showcase my frontend and backend de
 
 The ERD for the entities User, Item, Order (with Order_Main and Order_Item). The ERD describes the relationships between these tables and the fields they contain.
 
-![ERD for DineFlow Restaurent App](../dineflow-restaurant-app-hackathon/react-restaurant-frontend/public/DineFlow-Restaurent-App.drawio.png "sea color theme-1")
+![ERD for DineFlow Restaurent App](./react-restaurant-frontend/public/DineFlow-Restaurent-App.drawio.png "ERD for DineFlow Restaurent App")
 
 #### Entities and Attributes:
 
