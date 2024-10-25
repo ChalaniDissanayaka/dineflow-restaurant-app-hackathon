@@ -1,5 +1,13 @@
 ## DineFlow Restaurant App
 
+#### Links
+
+- [GitHub Repository Link](https://github.com/ChalaniDissanayaka/dineflow-restaurant-app-hackathon)
+
+#### Author
+
+Chalani Dissanayaka
+
 ### 1. Setup and How to Run the App
 
 #### Backend Setup:
@@ -26,13 +34,13 @@ PORT=4200
 ##### 4. Start the Server: Run the following command to start the backend server:
 
 ```
-npm start
+npm run dev
 ```
 
 or
 
 ```
-npm run dev
+npm start
 ```
 
 #### Frontend Setup:
@@ -59,6 +67,7 @@ npm start
 ### 2. Problem Significance of the Restaurant App
 
 In today's fast-paced world, restaurants face challenges in managing orders, inventory, and customer satisfaction efficiently. This restaurant app addresses these issues by streamlining order management, enabling seamless communication between customers and restaurant staff, and providing insights into menu performance. By enhancing operational efficiency, the app ultimately aims to improve customer experience and satisfaction, which is critical in a competitive dining environment.
+
 The significance of the restaurant app is to showcase my frontend and backend development skills for potential hiring managers. This project also serves as a practical test of my knowledge gained at Coder Academy during hackathon week, providing an opportunity to apply what I’ve learned in a real-world scenario.
 
 ### 3. Features and Functionality of the App
@@ -73,7 +82,7 @@ The significance of the restaurant app is to showcase my frontend and backend de
 
 - Menu Management:
 
-  - Admins have full control over menu items, with the ability to add, edit, or delete items. Each item can include descriptions, prices, and images.
+  - Admins have full control over menu items, with the ability to add, edit, or delete items. Each item can include name, prices, and images.
 
 - Order Tracking and Management:
 
@@ -101,23 +110,28 @@ The significance of the restaurant app is to showcase my frontend and backend de
 
 6. **As an admin**, As an admin, I can view the orders, and after completing an order, I can press the "Complete" button, which will mark the order as completed. so I can ensure timely service and track customer satisfaction.
 
-### 5. Third-Party Services, Packages, and Dependencies Used in the App
+### 5. Tech Stack for DineFlow Restaurant App (Third-Party Services, Packages, and Dependencies)
 
 ##### Backend:
 
+- **Node.js:** JavaScript runtime for handling the server-side operations of the app.
 - **Express:** A web framework for Node.js to handle server routing and middleware.
-- **Knex.js:** A SQL query builder for managing database interactions with SQLite.
-- **Bcrypt:** For hashing passwords securely.
+- **SQLite3 (via Knex.js):** Lightweight SQL database to store and manage data like users, items, and orders.
+- **Knex.js:** A SQL query builder used for database migrations, queries, and connecting to SQLite3.
+- **Express-Session (SQLite3 storage):** To handle user sessions for login, authentication, and maintaining session state.
+- **Bcrypt:** For encrypting user passwords to ensure secure authentication.
 - **Multer:** Middleware for handling file uploads (e.g., images for menu items).
 - **dotenv:** To manage environment variables.
 
 ##### Frontend:
 
-- **React:** A JavaScript library for building user interfaces.
-- **Chakra UI:** A component library for building accessible React applications with ease.
+- **React:** JavaScript library for building user interfaces, handling the app's dynamic components and routing.
+- **Chakra UI:** Component library for styling and creating responsive layouts with minimal effort.
 - **Axios:** For making HTTP requests to the backend API.
-- **React Router:** For managing routing within the React application.
-- **React Hot Toast:** For displaying toast notifications to users.
+- **React Router:** Library for managing navigation and routing in the app.
+- **React Hot Toast:** For providing user-friendly toast notifications to users (e.g., success or error messages).
+
+- **CSS Modules:** To manage and modularize component-specific styles.
 
 ### 6. Endpoints in the App
 
@@ -175,7 +189,7 @@ The significance of the restaurant app is to showcase my frontend and backend de
 
 The ERD for the entities User, Item, Order (with Order_Main and Order_Item). The ERD describes the relationships between these tables and the fields they contain.
 
-![ERD for DineFlow Restaurent App](docs/sea_colour_themes_1.png "sea color theme-1")
+![ERD for DineFlow Restaurent App](../dineflow-restaurant-app-hackathon/react-restaurant-frontend/public/DineFlow-Restaurent-App.drawio.png "sea color theme-1")
 
 #### Entities and Attributes:
 
@@ -184,9 +198,9 @@ The ERD for the entities User, Item, Order (with Order_Main and Order_Item). The
    - `id` (PK, Integer, Auto-increment)
    - `email` (String, 255)
    - `password` (String, 255)
-   - `is_admin` (Boolean): A flag to distinguish whether a user is an admin (`true` for admin, `false` for regular users).
-   - `created_at` (Timestamp): Date and time the user was created. ( further development )
-   - `updated_at` (Timestamp): Date and time the user’s details were last updated. ( further development )
+   - `is_admin` (Boolean): A flag to distinguish whether a user is an admin (`true` for admin, `false` for regular users). - ( further development )
+   - `created_at` (Timestamp): Date and time the user was created. - ( further development )
+   - `updated_at` (Timestamp): Date and time the user’s details were last updated. - ( further development )
 
 2. **Item**
 
@@ -194,8 +208,8 @@ The ERD for the entities User, Item, Order (with Order_Main and Order_Item). The
    - `name` (String, 255)
    - `price` (Decimal, 2)
    - `image` (Text)
-   - `created_at` (Timestamp): Date and time the item was created ( further development )
-   - `updated_at` (Timestamp): Date and time the item’s details were last updated. ( further development )
+   - `created_at` (Timestamp): Date and time the item was created - ( further development )
+   - `updated_at` (Timestamp): Date and time the item’s details were last updated. - ( further development )
 
 3. **Order_Main**
 
@@ -203,8 +217,8 @@ The ERD for the entities User, Item, Order (with Order_Main and Order_Item). The
    - `code` (String, 255)
    - `complete` (Boolean)
    - `total` (Decimal, 2)
-   - `created_at` (Timestamp): Date and time the order was placed. ( further development )
-   - `updated_at` (Timestamp): Date and time the order’s status was last updated. ( further development )
+   - `created_at` (Timestamp): Date and time the order was placed. - ( further development )
+   - `updated_at` (Timestamp): Date and time the order’s status was last updated. - ( further development )
 
 4. **Order_Item**
    - id (PK, Integer, Auto-increment)
@@ -230,6 +244,7 @@ The ERD for the entities User, Item, Order (with Order_Main and Order_Item). The
    - Admin users can view all orders and mark an order as complete.
 
 4. **Order_Item Table:**
+
    - Tracks which items are part of a specific order by linking `orderid` (foreign key to `Order_Main`) and itemid (foreign key to `Items`).
    - The `qty` field represents the quantity of each item ordered.
 
@@ -246,7 +261,41 @@ The ERD for the entities User, Item, Order (with Order_Main and Order_Item). The
 
 #### Relationships:
 
-    - A User can place multiple Orders. (one-to-many).
-    - Each Order can contain multiple Items (many-to-many relationship via the Order_Item table).
-    - Each Item can be part of many Orders (many-to-many relationship via Order_Item).
-    - Admins have the ability to manage both Items and Orders, whereas regular users can only place orders without authentication.
+- A User can place multiple Orders. (one-to-many).
+- Each Order can contain multiple Items (many-to-many relationship via the Order_Item table).
+- Each Item can be part of many Orders (many-to-many relationship via Order_Item).
+- Admins have the ability to manage both Items and Orders, whereas regular users can only place orders without authentication.
+
+### 7. Feature Development Part for the App
+
+#### User Management:
+
+- **Role-based Access Control (RBAC)**: Implement a system to differentiate between regular users and admins, where admins can access additional features like adding, updating, and deleting menu items, as well as viewing all orders.
+- **Password Recovery**: Enhance the system by adding a "Forgot Password" option, allowing users to reset their passwords securely.
+
+#### Menu and Order Enhancements:
+
+- **Search and Filter Functionality**: Add the ability for users to search and filter menu items based on categories like item_type (e.g., rice, noodles, pasta). This improves usability by helping users quickly find what they want.
+- **Real-time Order Status Updates**: Implement WebSockets to provide real-time updates on order status (e.g., pending, completed) to users and admins.
+
+#### Improved UI/UX:
+
+- **Animations and Transitions**: Add smooth animations and transitions for a more engaging and interactive experience when users navigate through the app.
+- **Performance Optimization**: Enhance the app’s performance, making it faster and more responsive.
+
+#### Database Updates:
+
+- **Delete Item (CRUD)**: Implement the ability for admins to delete items from the Items table using the existing database setup.
+- **Timestamps**: Add the following timestamp attributes to track record changes:
+
+  - `created_at`: Captures when users, items, or orders are created.
+  - `updated_at`: Captures when users, items, or orders are last modified.
+
+- **New Attribute for Items Table**:
+  - **Item Type**: Add an `category` field in the Items table to categorize menu items (e.g., rice, noodles, pasta), enabling easier filtering and menu management.
+
+### Conclusion
+
+The DineFlow restaurant app is designed to provide a smooth and efficient experience for both customers and admins. Customers can browse the menu, place orders, and track their order status in real-time. Admins have the ability to manage menu items, view orders, and mark them as completed. The app includes features like role-based access control, filtering menu items by category, and a user-friendly interface with animations for an engaging experience.
+
+With future enhancements like an add the ability for users to search and filter menu items, DineFlow aims to improve performance and deliver a more interactive and easy-to-use platform for restaurant management. The app is a strong showcase of both front-end and back-end development skills.
