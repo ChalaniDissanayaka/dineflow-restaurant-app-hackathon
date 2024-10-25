@@ -4,6 +4,10 @@
 
 - [GitHub Repository Link](https://github.com/ChalaniDissanayaka/dineflow-restaurant-app-hackathon)
 
+- [Deployment](https://dineflow-restaurant-app.netlify.app/)
+  - Back-End Deploy to Railway
+  - Front-End Deploy to Netlify
+
 #### Author
 
 Chalani Dissanayaka
