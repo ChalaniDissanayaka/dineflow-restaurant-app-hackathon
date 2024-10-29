@@ -1,17 +1,97 @@
-.items-container table {
-    margin-top: 20px;  
+/* Desktop styles */
+.items-container {
+    padding: 20px;
 }
-   
+
+.items-container h2.subtitle {
+    font-size: 24px;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.items-container button {
+    margin-top: 40px;
+    margin-bottom: 20px;
+    margin-left: 20px;
+}
+
+.items-container table {
+    margin-top: 20px;
+    width: 100%;
+}
+
 .items-container img {
     height: 100px;
     width: 100px;
     object-fit: cover;
 }
 
-.items-container Th {
+.items-container th {
     font-size: 18px;
     font-weight: bolder;
     color: rgb(64, 63, 63);
 }
 
+/* Mobile view styles */
+@media (max-width: 768px) {
+    .items-container {
+        padding: 20px;
+    }
 
+    .items-container h2.subtitle {
+        font-size: 20px;
+    } 
+    
+    .items-container button {
+        margin-left: 0;
+    }
+
+    /* Hide table and use card layout for each item on mobile */
+    .items-container table {
+        display: none;
+    }
+
+    /* Card layout for mobile */
+    .item-card {
+        border: 1px solid #ddd;
+        border-radius: 8px;
+        padding: 20px;
+        margin-bottom: 20px;
+        background-color: #fff;
+    }
+
+    .item-card h3 {
+        font-size: 18px;
+        font-weight: bold;
+        margin: 0;
+        margin-bottom: 10px;
+        text-align: center;
+    }
+
+    .item-card img {
+        height: 80px;
+        width: 80px;
+        object-fit: cover;
+    }
+
+    .item-card .item-info {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 20px;
+        text-transform: uppercase;
+    }
+
+    .item-card .item-info .item-label {
+        font-weight: bold;
+        color: #444;
+    }
+
+    .item-card .actions {
+        text-align: center;
+    }
+
+    .item-card .actions button {
+        font-size: 14px;
+        padding: 4px 60px;
+    }
+}

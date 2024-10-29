@@ -4,7 +4,7 @@
 
 .inner-layout {
     display: grid;
-    grid-template-columns: 1.5fr 6fr;
+    grid-template-columns: 1.5fr 6fr; /* Default layout for larger screens */
     gap: 20px;
 }
 
@@ -43,7 +43,7 @@
     flex-direction: column;
     gap: 20px;
     padding-top: 20px;
-    min-height: 90vh;
+    min-height: 90vh; /* This will be removed in mobile styles */
 }
 
 .sidebar-item {
@@ -53,4 +53,27 @@
     margin: 0 auto;
     padding: 10px;
     letter-spacing: 1px;
+}
+
+/* Mobile Styles */
+@media (max-width: 768px) {
+    .inner-layout {
+        grid-template-columns: 1fr; /* Change to a single column layout */
+    }
+
+    .sidebar {
+        order: -1; /* Move sidebar to the top */
+        padding: 30px 0; /* Add padding for nicer spacing on mobile */
+        min-height: auto; /* Remove min-height on mobile */
+    }
+    
+    .admin-navbar {
+        flex-direction: column; /* Stack navbar items vertically */
+        align-items: flex-start; /* Align items to the start */
+    }
+
+    .admin-navbar-buttons {
+        justify-content: flex-start; /* Align buttons to the start */
+        margin-top: 10px; /* Add margin for spacing */
+    }
 }

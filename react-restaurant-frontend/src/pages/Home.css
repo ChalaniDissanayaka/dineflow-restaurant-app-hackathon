@@ -12,6 +12,14 @@
     padding-left: 20px;
 }
 
+.home-nav .logout {
+    padding: 0 40px;
+}
+
+.home-nav .register {
+    padding: 0 25px;
+}
+
 .home-nav button {
     margin: 10px;
 }
@@ -35,11 +43,21 @@
 }
 
 .menu-mobile button {
-    margin: 0 30px 10px 0;
+    margin: 0 20px 10px 0;
+}
+
+.home-inner-container {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 10px;
 }
 
 /* Media query for mobile view */
 @media (max-width: 768px) {
+    .home-nav {
+        padding-bottom: 0;
+    }
+
     .menu-desktop {
         display: none; /* Hide desktop menu */
     }
@@ -51,10 +69,44 @@
     .menu-mobile {
         display: flex; /* Show the mobile menu when toggled */
     }
-}
 
-.home-inner-container {
-    display: grid;
-    grid-template-columns: 2fr 1fr;
-    gap: 10px;
+    .home-inner-container {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .menu-mobile button {
+        font-size: 14px;
+    }
+
+    .menu-mobile .logout {
+        padding: 0 38px;
+    }
+
+    .menu-mobile .register {
+        padding: 0 28px;
+    }
+
+
+    /* Display Cart below MainMenu */
+    .home-inner-container > :nth-child(1) { /* MainMenu */
+        order: 1;
+    }
+    .home-inner-container > :nth-child(2) { /* Cart */
+        order: 2;
+        margin-top: 20px; /* Adds spacing between MainMenu and Cart */
+    }
+
+    /* Display only two cards in MainMenu */
+    .mainmenu-container .card {
+        width: 100%; /* Ensure cards take full width */
+    }
+    .mainmenu-container .card:nth-child(n+3) { /* Hide cards beyond the first two */
+        display: none;
+    }
+
+    .home-nav {
+        padding-right: 5px;
+        padding-left: 5px;
+    }
 }

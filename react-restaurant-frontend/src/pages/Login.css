@@ -13,3 +13,16 @@
     margin-top: 10px;
     width: 100%;
 }
+
+/* Mobile Styles */
+@media (max-width: 768px) {
+    .login-container {
+        width: 90%; 
+        padding: 20px; 
+        margin: 0 auto; 
+    }
+
+    .login-container h2 {
+        font-size: 28px; 
+    }
+}

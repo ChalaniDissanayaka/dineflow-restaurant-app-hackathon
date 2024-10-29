@@ -6,13 +6,13 @@ function Footer() {
         <footer className="footer">
             <div className="footer-icons">
                 <a href="https://github.com/" target="_blank" rel="noopener noreferrer">
-                    <FaGithub size={30} />
+                    <FaGithub  />
                 </a>
                 <a href="https://www.linkedin.com/" target="_blank" rel="noopener noreferrer">
-                    <FaLinkedin size={30} />
+                    <FaLinkedin />
                 </a>
                 <a href="https://twitter.com/" target="_blank" rel="noopener noreferrer">
-                    <FaTwitter size={30} />
+                    <FaTwitter  />
                 </a>
             </div>
             <p className="footer-text">

@@ -33,3 +33,16 @@
   color: #4c4d4e;
   font-weight: bold;
 }
+
+@media (max-width: 768px) {
+  .main-menu-container {
+    grid-template-columns: 1fr 1fr;
+  }
+  .menu-item-title {
+    font-size: 14px;
+  }
+
+  .menu-item-price {
+    font-size: 14px;
+  }
+}

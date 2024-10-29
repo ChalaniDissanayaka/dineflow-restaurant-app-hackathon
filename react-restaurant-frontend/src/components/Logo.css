@@ -13,3 +13,21 @@
     font-weight: bold;
     color: white;
 }
+
+/* Mobile view adjustments */
+@media (max-width: 768px) {
+    .logo img {
+        width: 100px; /* Smaller logo size for mobile */
+        height: auto;
+    }
+
+    .logo h1 {
+        font-size: 20px; /* Adjust font size for mobile */
+    }
+
+    /* Align the logo and hamburger icon */
+    .home-nav {
+        justify-content: space-between;
+        padding: 5px 20px;
+    }
+}

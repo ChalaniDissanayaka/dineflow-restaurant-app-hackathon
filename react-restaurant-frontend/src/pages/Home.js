@@ -31,10 +31,10 @@ function Home() {
                     ): (
                             <>
                                 <Link to="/login">
-                                    <Button colorScheme='teal' variant='solid' size='md'>Login</Button>
+                                    <Button colorScheme='teal' variant='solid' size='md' className='logout'>Login</Button>
                                 </Link>
                                 <Link to="/register">
-                                    <Button colorScheme='yellow' variant='solid'>Register</Button>
+                                    <Button colorScheme='yellow' variant='solid' className='register'>Register</Button>
                                 </Link>
                             </>
                     )}
@@ -43,7 +43,7 @@ function Home() {
                 {/* Mobile Menu Icon */}
                 <div className="menu-mobile-icon">
                     <IconButton 
-                        icon={<HamburgerIcon w={8} h={8} />} 
+                        icon={<HamburgerIcon w={7} h={7} />} 
                         colorScheme='white'
                         variant="solid" 
                         onClick={toggleMenu} 
@@ -62,10 +62,10 @@ function Home() {
                     ): (
                             <>
                                 <Link to="/login">
-                                    <Button colorScheme='teal' variant='solid' size='md'>Login</Button>
+                                    <Button colorScheme='teal' variant='solid' size='md' className='logout'>Login</Button>
                                 </Link>
                                 <Link to="/register">
-                                    <Button colorScheme='yellow' variant='solid'>Register</Button>
+                                    <Button colorScheme='yellow' variant='solid' className='register'>Register</Button>
                                 </Link>
                             </>
                     )}
